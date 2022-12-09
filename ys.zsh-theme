@@ -46,7 +46,7 @@ ys_hg_prompt_info() {
 
 # Virtualenv
 local venv_info='$(virtenv_prompt)'
-YS_THEME_VIRTUALENV_PROMPT_PREFIX=" %{$fg[green]%}"
+YS_THEME_VIRTUALENV_PROMPT_PREFIX=" %{$fg[red]%}"
 YS_THEME_VIRTUALENV_PROMPT_SUFFIX=" %{$reset_color%}%"
 virtenv_prompt() {
 	[[ -n "${VIRTUAL_ENV:-}" ]] || return
@@ -55,7 +55,7 @@ virtenv_prompt() {
 
 # conda
 local conda_info='$(conda_prompt)'
-YS_THEME_CONDA_PROMPT_PREFIX=" %{$fg[green]%}"
+YS_THEME_CONDA_PROMPT_PREFIX=" %{$fg[red]%}"
 YS_THEME_CONDA_PROMPT_SUFFIX=" %{$reset_color%}%"
 conda_prompt() {
 	[[ -n "${CONDA_DEFAULT_ENV:-}" ]] || return
